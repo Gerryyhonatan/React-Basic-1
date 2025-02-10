@@ -1,6 +1,7 @@
 import HeaderCustom from "./components/Header"
 import Welcome from "./components/Welcome"
 import ProfileCard from "./components/ProfileCard"
+import Counter from "./components/Counter"
 
 type Teacher = {
   name : string;
@@ -35,15 +36,20 @@ function App() {
   return (
     <>
       <HeaderCustom/>
-      <h1>Hello World</h1>
+      {/* <h1>Hello World</h1> */}
 
       <div className="container-card">
-      {
+      {/* {
         teachers.map((teacher) => {
           return <ProfileCard name={teacher.name} year={teacher.year} job={teacher.job} key={teacher.id}/>
         })
-      }
+      } */}
+
+
+      <Counter />
+      
       </div>
+
 
       <Welcome/>
     </>
