@@ -1,16 +1,20 @@
+import { useState } from "react"
+
 const Counter = () => {
+    const [count, setCount] = useState(0)
+
     const handleDecrement = () => {
-        alert("Decrement")
+        setCount(count - 1)
     }
 
     const handleIncrement = () => {
-        alert("Increment")
+        setCount(count + 1)
     }
 
     return (
         <div style={{display : "flex", gap: "16px"}}>
             <button onClick={handleDecrement}>Kurang</button>
-            <p>0</p>
+            <p>{count}</p>
             <button onClick={handleIncrement}>Tambah</button>
         </div>
     )
