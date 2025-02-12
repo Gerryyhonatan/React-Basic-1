@@ -1,8 +1,13 @@
-import HeaderCustom from "./components/Header"
-import Welcome from "./components/Welcome"
+// import HeaderCustom from "./components/Header"
+// import Welcome from "./components/Welcome"
 // import ProfileCard from "./components/ProfileCard"
-import Counter from "./components/Counter"
-import Like from "./components/Like"
+// import Counter from "./components/Counter"
+// import Like from "./components/Like"
+import { Routes, Route } from "react-router"
+import TermsPage from "./pages/TermsPage"
+import HomePage from "./pages/HomePage"
+import NotFoundPage from "./pages/NotFoundPage"
+import ProductDetailPage from "./pages/ProductDetailPage"
 
 // type Teacher = {
 //   name : string;
@@ -36,25 +41,15 @@ import Like from "./components/Like"
 function App() {
   return (
     <>
-      <HeaderCustom/>
-      {/* <h1>Hello World</h1> */}
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/terms" element={<TermsPage/>}/>
 
-      <div className="container-card">
-      {/* {
-        teachers.map((teacher) => {
-          return <ProfileCard name={teacher.name} year={teacher.year} job={teacher.job} key={teacher.id}/>
-        })
-      } */}
-
-
-      <Counter />
-
-      <Like />
-      
-      </div>
-
-
-      <Welcome/>
+        {/* DYNAMIC ROUTE */}
+        <Route path="/product/:productSlug" element={<ProductDetailPage/>}/>
+        
+        <Route path="*" element={<NotFoundPage/>}/>
+      </Routes>
     </>
   )
 }
