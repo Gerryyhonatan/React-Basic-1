@@ -1,14 +1,16 @@
-// import HeaderCustom from "./components/Header"
+import HeaderCustom from "./components/Header"
 // import Welcome from "./components/Welcome"
 // import ProfileCard from "./components/ProfileCard"
 // import Counter from "./components/Counter"
 // import Like from "./components/Like"
 import { Routes, Route } from "react-router"
-import TermsPage from "./pages/TermsPage"
+// import TermsPage from "./pages/TermsPage"
 import HomePage from "./pages/HomePage"
 import NotFoundPage from "./pages/NotFoundPage"
 import ProductDetailPage from "./pages/ProductDetailPage"
-import ProductListPage from "./pages/ProductListPage"
+// import ProductListPage from "./pages/ProductListPage"
+import AboutPage from "./pages/AboutPage"
+import ProductPage from "./pages/ProductPage"
 
 // type Teacher = {
 //   name : string;
@@ -42,11 +44,12 @@ import ProductListPage from "./pages/ProductListPage"
 function App() {
   return (
     <>
+      <HeaderCustom/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/terms" element={<TermsPage/>}/>
-
-        <Route path="/product-list" element={<ProductListPage/>}/>
+        <Route path="/about" element={<AboutPage/>}/>
+        <Route path="/product" element={<ProductPage/>}/>
+        <Route path="/productDetail" element={<ProductDetailPage/>}/>
 
         {/* DYNAMIC ROUTE */}
         <Route path="/product/:productSlug" element={<ProductDetailPage/>}/>
