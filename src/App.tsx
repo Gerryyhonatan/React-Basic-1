@@ -11,6 +11,7 @@ import ProductDetailPage from "./pages/ProductDetailPage"
 // import ProductListPage from "./pages/ProductListPage"
 import AboutPage from "./pages/AboutPage"
 import ProductPage from "./pages/ProductPage"
+import FormPage from "./pages/FormPage"
 
 // type Teacher = {
 //   name : string;
@@ -53,6 +54,8 @@ function App() {
 
         {/* DYNAMIC ROUTE */}
         <Route path="/product/:productSlug" element={<ProductDetailPage/>}/>
+
+        <Route path="/form" element={<FormPage/>}/>
         
         <Route path="*" element={<NotFoundPage/>}/>
       </Routes>
