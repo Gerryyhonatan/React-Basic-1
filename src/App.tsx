@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage"
 import ProductPage from "./pages/ProductPage"
 import FormPage from "./pages/FormPage"
 import RHFPage from "./pages/RHFPage"
+import EmployeesPage from "./pages/EmployeesPage"
 
 // type Teacher = {
 //   name : string;
@@ -58,6 +59,7 @@ function App() {
 
         <Route path="/form" element={<FormPage/>}/>
         <Route path="/rhf" element={<RHFPage/>}/>
+        <Route path="/employees" element={<EmployeesPage/>}/>
         
         <Route path="*" element={<NotFoundPage/>}/>
       </Routes>

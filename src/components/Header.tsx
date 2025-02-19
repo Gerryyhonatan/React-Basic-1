@@ -8,6 +8,7 @@ function HeaderCustom() {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to="/product">Product</Link>
+                <Link to="/employees">Employees</Link>
             </div>
             <ul>
                 
